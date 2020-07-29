@@ -1,0 +1,94 @@
+Using username "student-01-55f6835b0d73".
+Authenticating with public key "imported-openssh-key"
+Linux linux-instance 4.9.0-12-amd64 #1 SMP Debian 4.9.210-1+deb9u1 (2020-06-07) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+student-01-55f6835b0d73@linux-instance:~$ git clone https://github.com/davidsun1122/introtogitweek3.git
+Cloning into 'introtogitweek3'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+student-01-55f6835b0d73@linux-instance:~$ ls
+introtogitweek3
+student-01-55f6835b0d73@linux-instance:~$ cd introtogitweek3
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git config --global user.name "David"
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git config --global user.email "davidsun1122@gmail.com"
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ nano README.md
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git add README.md
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git commit
+[master 8f52fd5]  I am editing the README file.
+ 1 file changed, 7 insertions(+)
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git push origin masterUsername for 'https://github.com': davidsun1122
+Password for 'https://davidsun1122@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/davidsun1122/introtogitweek3.git/'
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git push origin masterUsername for 'https://github.com': davidsun1122
+Password for 'https://davidsun1122@github.com':
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 369 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/davidsun1122/introtogitweek3.git
+   43e3345..8f52fd5  master -> master
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ nano example.py
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git add example.py
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git commit
+[master fcd74c0] add new file example.py
+ 1 file changed, 4 insertions(+)
+ create mode 100644 example.py
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git push origin masterUsername for 'https://github.com': davidsun1122
+Password for 'https://davidsun1122@github.com':
+To https://github.com/davidsun1122/introtogitweek3.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/davidsun1122/introtogitweek3.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git pull origin masterremote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/davidsun1122/introtogitweek3
+ * branch            master     -> FETCH_HEAD
+   8f52fd5..75f9b8b  master     -> origin/master
+Merge made by the 'recursive' strategy.
+ newfile | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newfile
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git push origin masterUsername for 'https://github.com': davidsun1122
+Password for 'https://davidsun1122@github.com':
+Counting objects: 5, done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 635 bytes | 0 bytes/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/davidsun1122/introtogitweek3.git
+   75f9b8b..35fbc3d  master -> master
+student-01-55f6835b0d73@linux-instance:~/introtogitweek3$ git push origin master
